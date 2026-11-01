@@ -5,8 +5,26 @@
 > Este repositorio alberga la investigación y desarrollo completo del proyecto semestral de **Generative Artificial Intelligence (580694)**, Primavera 2026, Universidad de Concepción.  
 > * **Entregable 1:** Definición de la tarea, evaluación del baseline zero-shot (4%) y diagnóstico de falla por *Ausencia Paramétrica*.  
 > * **Entregable 2:** Diseño, implementación y evaluación científica de la arquitectura RAG local con decodificación restringida (82%).  
+> * **Entregable 3:** Sistema de 4 agentes (Enrutador, Recuperador ReAct, Redactor, Verificador) sobre Qwen3-4B, con ablación por técnica. Ver [`Deliverable3/`](Deliverable3/).  
 > **Equipo (Coautores):** Álvaro Contreras y Pablo Cortés  
 > **Origen del Repositorio:** Fork de trabajo de [`alnicozu/GENERATIVE-ARTIFICIAL-INTELLIGENCE-DELIVERABLE-1`](https://github.com/alnicozu/GENERATIVE-ARTIFICIAL-INTELLIGENCE-DELIVERABLE-1).
+
+---
+
+## 🤖 Entregable 3: sistema de agentes
+
+Todo el Entregable 3 está en [`Deliverable3/`](Deliverable3/); su [`README_D3.md`](Deliverable3/README_D3.md) explica la estructura y cómo reproducir el video.
+
+| Configuración | 50 originales | 25 difíciles |
+|---|---|---|
+| Prompting directo | 1 (2 %) | 0 (0 %) |
+| RAG del E2 | 40 (80 %) | 16 (64 %) |
+| **Agentes (completo)** | **46 (92 %)** | **20 (80 %)** |
+| sin few-shot / sin ReAct / sin CoT / sin Verificador | 44 / 45 / 46 / 44 | 19 / 18 / 19 / 19 |
+
+**Reproducir el video:** abrir [`Deliverable3/D3_colab_qwen3_4b.ipynb`](Deliverable3/D3_colab_qwen3_4b.ipynb) en Colab con GPU T4 y ejecutar los Pasos 0–5d. El Paso 2 clona este repositorio; el Paso 5d corre en vivo los casos del video (H06, P25, H20 y el caso de falla H03), muestra los mensajes entre agentes y descarga sus trazas.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alnicozu/GENERATIVE-ARTIFICIAL-INTELLIGENCE-DELIVERABLE-2/blob/main/Deliverable3/D3_colab_qwen3_4b.ipynb)
 
 ---
 
